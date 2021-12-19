@@ -1,0 +1,9 @@
+{% extends "core/base.html" %}
+
+{% block content_title %}Список категорий{% endblock %}
+
+{% block content %}
+    {% for category in categories %}
+        <p><a class="text-white fs-4" href="{% url 'products_list' category.id %}">{{ category }}</a></p>
+     {% endfor %}
+{% endblock %}

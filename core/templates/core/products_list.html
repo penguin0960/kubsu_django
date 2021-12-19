@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block content_title %}
+    Список товаров "{{ category }}"
+{% endblock %}
+
+{% block content %}
+    {% for product in products %}
+        <p><a class="text-white fs-4" href="{% url 'product_detail' product.id %}">{{ product }}</p>
+    {% endfor %}
+
+{% endblock %}
